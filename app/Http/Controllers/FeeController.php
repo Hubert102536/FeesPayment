@@ -19,7 +19,7 @@ class FeeController extends Controller
 
 
     public function index(){
-        return view('trevor.searchfees');
+        return view('102536.searchfees');
     }
 
     public function searchstudent(){
@@ -29,16 +29,16 @@ class FeeController extends Controller
     public  function payFees(){
         $fees= new Fee();
 
-        $fees->std_id=request('std_id');
+        $fees->student_id=request('student_id');
         $fees->amount=request('amount');
 
-        DB::table('students')->where('id','=', $fees->std_id)->decrement('Balance',$fees->amount);
+        DB::table('students')->where('id','=', $fees->student_id)->decrement('Balance',$fees->amount);
 
         $fees->save();
         return redirect('/');
     }
     public function searchPayment(){
-        return view('trevor.searchpayments');
+        return view('102536.searchpayments');
     }
 
     public function getPayment(){
@@ -46,10 +46,10 @@ class FeeController extends Controller
 
         $name=Student::find($id)->fullName;
 
-        $fees = Fee::where('std_id',$id)->get(['id', 'std_id', 'amount', 'created_at']);
+        $fees = Fee::where('student_id',$id)->get(['id', 'student_id', 'amount', 'created_at']);
 
 
-        return view('trevor.payresults', compact('name','fees'));
+        return view('102536.payresults', compact('name','fees'));
 
 
     }

@@ -1,4 +1,4 @@
-@extends ('trevor.master')
+@extends ('102536.master')
 
 @section('links')
     <a class="navbar-brand" href="/add">Add a Student</a>
@@ -31,7 +31,7 @@
                 <tr>
                     {{--<th scope="row">1</th>--}}
                     <td>{{$fee->id}}</td>
-                    <td>{{$fee->std_id}}</td>
+                    <td>{{$fee->student_id}}</td>
                     <td>{{$fee->amount}}</td>
                     <td>{{$fee->created_at->format('j M Y , g:ia')}}</td>
                 </tr>

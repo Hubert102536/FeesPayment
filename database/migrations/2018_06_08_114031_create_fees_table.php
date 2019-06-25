@@ -15,11 +15,11 @@ class CreateFeesTable extends Migration
     {
         Schema::create('fees', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('std_id');
+            $table->unsignedInteger('student_id');
             $table->integer('amount');
             $table->timestamps();
 
-            $table->foreign('std_id')
+            $table->foreign('student_id')
                 ->references('id')
                 ->on('students');
         });

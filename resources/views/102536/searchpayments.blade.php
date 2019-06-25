@@ -1,4 +1,4 @@
-@extends('trevor.master')
+@extends('102536.master')
 
 @section('links')
     <a class="navbar-brand" href="/add">Add a Student</a>

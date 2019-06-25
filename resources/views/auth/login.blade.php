@@ -1,4 +1,4 @@
-@extends('trevor.master')
+@extends('102536.master')
 
 @section('content')
 <div class="container">

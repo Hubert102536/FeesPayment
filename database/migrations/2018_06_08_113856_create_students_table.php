@@ -22,7 +22,6 @@ class CreateStudentsTable extends Migration
             $table->Integer('Balance');
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE students AUTO_INCREMENT = 90000;");
     }
 
     /**

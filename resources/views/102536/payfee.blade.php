@@ -1,4 +1,4 @@
-@extends ('trevor.master')
+@extends ('102536.master')
 
 @section('links')
     <a class="navbar-brand" href="/add">Add a Student</a>
@@ -25,7 +25,7 @@
                         <input required type="number" class="form-control" name="amount" placeholder="Amount to be paid">
                     </div>
                 </div>
-                <input readonly type="hidden" name="std_id" value="{{$student->id}}">
+                <input readonly type="hidden" name="student_id" value="{{$student->id}}">
                 {{--<input type="hidden" name="Balance" value="{{$student->Balance}}">--}}
 
                 <div class="form-group">
@@ -33,12 +33,7 @@
                         <input type="submit" class="form-control btn btn-success" value="Submit Fees">
                     </div>
                 </div>
-
-            </form>
-
-
+                </form>
         </div>
-
     </div>
-
 @endsection

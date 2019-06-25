@@ -15,17 +15,15 @@ class StudentController extends Controller
     {
         $this->middleware('auth');
     }
-
-
-
+    
     public function home(){
         $students =Student::all();
         $fee = DB::table('fees')->sum('amount');
-        return view('trevor.home', ['students'=>$students , 'fee'=>$fee]);
+        return view('102536.home', ['students'=>$students , 'fee'=>$fee]);
     }
     public function index(){
 
-        return view('trevor.student');
+        return view('102536.student');
     }
 
     public function create(){
@@ -45,6 +43,6 @@ class StudentController extends Controller
 
         $student=Student::find($id, ['id','fullName','Balance']);
 
-        return view('trevor.payfee', ['student'=>$student]);
+        return view('102536.payfee', ['student'=>$student]);
     }
 }
